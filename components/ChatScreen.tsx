@@ -109,7 +109,7 @@ export default function ChatScreen({
 
   return (
     <div ref={containerRef} className="overflow-y-auto max-h-screen">
-      <div className=" pb-10 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-7 flex flex-col">
+      <div className=" pb-10 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-7 flex flex-col text-white">
         <Confetti
           width={width}
           height={height}
@@ -117,7 +117,7 @@ export default function ChatScreen({
           run={isSuccessRequest}
         />
         <ChatEntry>
-          <div className="text-sm font-normal text-gray-900 dark:text-white">
+          <div className="text-sm font-normal text-white">
             Contribute to fine-tuning The Grid's AI Search Algorithm and earn rewards, powered by{" "}
             <Link
               href="https://docs.cdp.coinbase.com/mpc-wallet/docs/welcome"

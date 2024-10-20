@@ -1,54 +1,57 @@
 import Image from "next/image";
 import { Orbitron } from 'next/font/google';
-import { Box, TextField, Button, CircularProgress, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-// Load the Handjet font
-const handjet = Orbitron({ subsets: ['latin'] });
+// Load the Orbitron font
+const orbitron = Orbitron({ subsets: ['latin'] });
 
 export const Navigation = () => {
   return (
-    <div className="bg-gray-800">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          <div className="flex flex-1 items-center items-stretch justify-between">
-            <div className="flex flex-shrink-0 items-center">
-            <Typography
-                variant="h2"
-                className={handjet.className}
-                sx={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  color: 'white',
-                  transition: 'all 0.5s ease',
-                  mb: 2,
-                }}
-              >
-                GRID
-              </Typography>
-              <Typography
-                variant="h2"
-                className={handjet.className}
-                sx={{
-                  position: 'absolute',
-                  top: 38,
-                  left: 180,
-                  color: 'white',
-                  transition: 'all 0.5s ease',
-                  mb: 2,
-                  fontSize: 20,
-                }}
-              >
-                AI Rating Tool
-              </Typography>
-              
-            </div>
-            <div className="flex ">
+    <Box
+      sx={{
+        backgroundColor: 'gray.800',
+        paddingX: { xs: 2, sm: 6, lg: 8 },
+        height: '64px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        maxWidth: '100%',
+        mx: 'auto',
+      }}
+    >
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Typography
+          variant="h2"
+          className={orbitron.className}
+          sx={{
+            color: 'white',
+            transition: 'all 0.5s ease',
+            mb: 2,
+            fontSize: '1.8rem',
+          }}
+        >
+          GRID
+        </Typography>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <Typography
+          variant="h2"
+          className={orbitron.className}
+          sx={{
+            color: 'white',
+            transition: 'all 0.5s ease',
+            mb: 2,
+            fontSize: '1.2rem',
+            marginLeft: '20px', // Adjust this value to control spacing between titles
+          }}
+        >
+          AI Rating Tool
+        </Typography>
+      </Box>
+
+      {/* Add any additional elements or buttons here if needed */}
+      <Box sx={{ display: 'flex' }}>
+        {/* Future navigation buttons or links can be added here */}
+      </Box>
+    </Box>
   );
 };
