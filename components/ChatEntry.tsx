@@ -15,21 +15,20 @@ export const ChatEntry = ({ message = "", children }: ChatEntryProps) => {
         display: 'flex',
         justifyContent: 'start',
         mb: 4,
+        gap: '10px',
         // '&:hover': {
         //   boxShadow: `0px 0px 20px ${theme.palette.primary.main}`, // Glowing hover effect
         // },
       }}
     >
-      <Avatar
-        sx={{
-          bgcolor: theme.palette.primary.main,
-          width: 40,
-          height: 40,
-          mr: 2
-        }}
-      >
-        G
-      </Avatar>
+      <img
+          src="https://noun-api.com/beta/pfp"
+          alt="Profile"
+          style={{
+            width: '50px',
+            height: '50px',
+          }}
+        />
 
       <Box
         sx={{
