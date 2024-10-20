@@ -131,10 +131,10 @@ export default function ChatScreen({
           </div>
         </ChatEntry>
         {showImageRanking && (
-          <ImageRanking onClick={onTaskComplete} images={selectedImages} />
+          <ImageRanking onClick={onTaskComplete}/>
         )}
         {!showImageRanking && (
-          <ImageRanking onClick={onTaskComplete} images={selectedImages} />
+          <ImageRanking onClick={onTaskComplete}/>
         )}
         {entries.map((entry: any, idx: number) => (
           <ChatEntry key={`entry-${idx}`} message={entry.message} />

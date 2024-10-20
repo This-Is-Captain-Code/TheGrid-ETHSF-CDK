@@ -16,7 +16,7 @@ type ImageRankingProps = {
 export const ImageRanking = ({ onClick }: ImageRankingProps) => {
   return (
     <ChatEntry message="Please click on the image from the list that you think is the best.">
-      <ImageList onClick={onClick} images={images} />
+      <ImageList onClick={onClick}/>
     </ChatEntry>
   );
 };
